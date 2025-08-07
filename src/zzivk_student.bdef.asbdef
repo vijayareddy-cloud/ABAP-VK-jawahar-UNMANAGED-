@@ -1,0 +1,30 @@
+managed implementation in class zbp_zivk_student unique;
+strict ( 2 );
+
+define behavior for ZZIVK_STUDENT alias Student
+persistent table zvk_rap
+lock master
+authorization master ( instance )
+//etag master <field_name>
+{
+  create ( authorization : global );
+  update;
+  delete;
+  field ( numbering : managed, readonly ) Id;
+  action ( features : instance ) setAdmitted result [1] $self;
+ mapping for ZVK_RAP
+
+  {
+    Id = id;
+    Firstname = firstname;
+    Lastname = lastname;
+    Age = Age;
+    Course = course;
+    Courseduration = courseduration;
+    Status = status;
+    Gender = gender;
+    Dob = dob;
+    Lastchangedat = lastchangedat;
+    Locallastchangedat = locallastchangedat;
+  }
+}

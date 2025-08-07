@@ -1,0 +1,7 @@
+@EndUserText.label: 'Service Definition for student'
+define service ZV_EXPOSE {
+  expose ZC_VK_STUDENT;
+}
+ 
+ 
+ 
